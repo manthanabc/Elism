@@ -10,20 +10,21 @@ let showingGates=false;
 
 let buttonInOut=[-1,-1];
 
-let and=new And(50, 50);
-let or1=new Or(350,150);
+// let and=new And(50, 50);
+// let or1=new Or(350,150);
 
-let gates=[and,or1];
+let bat0 = new Battery(500, 500);
+let gates=[bat0];
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1000, 800);
   background(120);
   layoutbuttons=[new layoutButton(10,height-30,20,20,showGates)];
 }
 
 
 function draw() {
-  background(120);
+  background(0);
 
   for(let i=0;i<gates.length;i++)
   {
@@ -224,7 +225,7 @@ function showGates()
 {
   if(!showingGates){
     showingGates=true;
-    gates.push(new And(40,height-50),new Or(120,height-50),new Xor(200,height-50),new Not(300,height-30));
+    gates.push(new And(40,height-50),new Or(120,height-50),new Xor(200,height-50),new Not(300,height-30), new Battery(400, height-500));
   } else {
      let skip=0;
      for(let i=0;i<gates.length+skip;i++)

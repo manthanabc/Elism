@@ -23,7 +23,7 @@ class wire
     
     
     fill(255);
-    stroke(2);
+    stroke(255);
     line(buttonIn.x,buttonIn.y,buttonOut.x,buttonOut.y);
   }
   
