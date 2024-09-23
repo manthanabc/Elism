@@ -64,19 +64,19 @@ function draw() {
     let count=0;
     for(let g=0;g<gates.length;g++)
     {
-      console.log(wires[w]);
+      // console.log(wires[w]);
       if(ElementIn(gates[g].buttons,[wires[w].buttonIn,wires[w].buttonOut]))
       {
-        console.log("yes");
+        // console.log("yes");
         count++;
       }
     }
     if(count<=1)
     {
-      console.log("no");
-      console.log(wires,w);
+      // console.log("no");
+      // console.log(wires,w);
       wires=removee(wires,w);
-      console.log(wires,w);
+      // console.log(wires,w);
     }
   }
   
@@ -207,7 +207,6 @@ function removee(arr,index)
 
 function ElementIn(arr1,arr2)
 {
-  console.log(arr1,arr2);
   for(let i=0;i<arr1.length;i++)
   {
     for(let j=0;j<arr2.length;j++)
@@ -225,7 +224,7 @@ function showGates()
 {
   if(!showingGates){
     showingGates=true;
-    gates.push(new And(40,height-50),new Or(120,height-50),new Xor(200,height-50),new Not(300,height-30), new Battery(400, height-500));
+    gates.push(new And(40,height-50),new Or(120,height-50),new Xor(200,height-50),new Not(300,height-30), new Battery(400, height-50),  new Resistor(500, height-50));
   } else {
      let skip=0;
      for(let i=0;i<gates.length+skip;i++)

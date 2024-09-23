@@ -22,7 +22,6 @@ class button
    {
      if(!this.type){
        this.state=(this.state==1)?0:1;
-       console.log("toggled");
      }
      return this;
    } else {
